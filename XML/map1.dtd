@@ -1,0 +1,13 @@
+# This is a document type definition
+
+# This tells us the map must have polygons
+<!ELEMENT map (polygon)>
+
+# The polygons must have points
+<!ELEMENT polygon (points)>
+
+# Polygons can also have an attribute ID
+<!ATTLIST polygon id ID #IMPLIED>
+
+# Points must be in text form
+<!ELEMENT points (#PCDATA)>

@@ -1,0 +1,21 @@
+'''
+    -*- coding: utf-8 -*-
+    Python Version: 3.6
+    Course: GEOG5790M Programming-for-Spatial-Analysts-Advanced-Skills
+    Author: Annabel Whipp
+    File name: createdb.py
+    Description: Script to read an SQLite database by row
+'''
+
+# import the sqlite3 library
+import sqlite3
+
+# connect to the "resultsdb.sqlite" database
+conn = sqlite3.connect('database.sqlite')
+
+# get a cursor from the connection to interact with the database.
+c = conn.cursor()
+
+# read the table rows and print the first value in each row
+for row in c.execute('SELECT * FROM Results ORDER BY burglaries'):
+    print(row[0])
