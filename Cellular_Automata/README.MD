@@ -1,3 +1,5 @@
+# Cellular Automata
+
 In this practical a simple cellular automata model was built to represent a small forest fire
 
 There is one file needed which is called ca.py
