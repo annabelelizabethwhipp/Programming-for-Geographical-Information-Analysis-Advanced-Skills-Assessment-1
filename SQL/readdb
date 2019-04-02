@@ -1,11 +1,11 @@
-'''
+"""
     -*- coding: utf-8 -*-
     Python Version: 3.6
     Course: GEOG5790M Programming-for-Spatial-Analysts-Advanced-Skills
     Author: Annabel Whipp
     File name: createdb.py
     Description: Script to read an SQLite database by row
-'''
+"""
 
 # import the sqlite3 library
 import sqlite3
