@@ -1,4 +1,4 @@
-**Creating databases with SQL**
+# Creating databases with SQL
 
 The folder for this practical includes the code for two stages of the work:
 
