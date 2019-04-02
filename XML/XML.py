@@ -1,22 +1,31 @@
-'''
+"""
     -*- coding: utf-8 -*-
     Python Version: 3.6
     Course: GEOG5790M Programming-for-Spatial-Analysts-Advanced-Skills
     Author: Annabel Whipp
     File name: XML.py
-    
-'''
+"""
 
-# imports
+
+"""
+imports
+
+"""
 from lxml import etree
 import lxml.html
 
-# PART 1 validating 
+
+"""
+PART 1 validating the XML files
+"""
+
 dtd_file = open("map1.dtd")
 xml1 = open("map1.xml").read() 
+# remove the prolog
 xml1 = xml1.replace('<?xml version="1.0" encoding="UTF-8"?>',"")
 dtd = etree.DTD(dtd_file)
 root = etree.XML(xml1)
+# print
 print(dtd.validate(root))
 
 # PART 2 printing the elements
