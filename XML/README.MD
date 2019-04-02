@@ -1,4 +1,4 @@
-**XML**
+# XML
 
 This script validates the scheme of an XML file, edits the file and then transforms the file to HTML
 
