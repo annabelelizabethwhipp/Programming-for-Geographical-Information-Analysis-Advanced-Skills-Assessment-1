@@ -1,3 +1,17 @@
+"""
+    -*- coding: utf-8 -*-
+    Python Version: 3.6
+    Course: GEOG5790M Programming-for-Spatial-Analysts-Advanced-Skills
+    Author: Annabel Whipp
+    File name: main.py
+   
+"""
+
+
+"""
+imports
+"""
+
 from lxml import etree
 import lxml.html
 
@@ -22,29 +36,31 @@ print (root[1][0].tag)		# "points2"
 print (root[1][0].text)		# 
 
 # PART 3 appending new polygon
-#root = etree.XML(xml1)					# Could start from nothing
-#p2 = etree.Element("polygon")				# Create polygon
-#p2.set("id", "p2");					# Set attribute
-#p2.append(etree.Element("points"))			# Append points
-#p2[0].text = "120,150 150,250 200,200 100,000 100,100"	# Set points text
-#root.append(p2)						# Append polygon
-#print (root[1].tag)					# Check
+root = etree.XML(xml1)					# Could start from nothing
+p2 = etree.Element("polygon")				# Create polygon
+p2.set("id", "p2");					# Set attribute
+p2.append(etree.Element("points"))			# Append points
+p2[0].text = "120,150 150,250 200,200 100,000 100,100"	# Set points text
+root.append(p2)						# Append polygon
+print (root[1].tag)					# Check
 
 # Producing the xml3
-#out = etree.tostring(root, pretty_print=True)
-#print(out)
-#writer = open('xml3.xml', 'wb')		# Open for binary write
-#writer.write(out)
-#writer.close()
-
-# printing the HTML
+out = etree.tostring(root, pretty_print=True)
+print(out)
+writer = open('xml3.xml', 'wb')		# Open for binary write
+writer.write(out)
+writer.close()
+ 
 xslt_doc = etree.parse("map3.xsl")
 xslt_transformer = etree.XSLT(xslt_doc)
 
-source_doc = etree.parse("xml3_ours.xml")
+# writing out xml
+source_doc = etree.parse("xml3_mine.xml")
 output_doc = xslt_transformer(source_doc)
  
+# convert to html
 print(str(output_doc))
+# pretty print puts line breaks between objects etc 
 output_doc.write("output-toc.html", pretty_print=True)
 
 
