@@ -1,3 +1,12 @@
+"""
+    -*- coding: utf-8 -*-
+    Python Version: 3.6
+    Course: GEOG5790M Programming-for-Spatial-Analysts-Advanced-Skills
+    Author: Annabel Whipp
+    File name: model.py
+    
+"""
+# imports 
 from landscape import Landscape 
 from agent import Agent
 import random
@@ -6,10 +15,6 @@ import multiprocessing
 class Model :
 
     
-
-    
-        
-        
     def task(self, node, number_of_nodes, pipes):    
 
     
