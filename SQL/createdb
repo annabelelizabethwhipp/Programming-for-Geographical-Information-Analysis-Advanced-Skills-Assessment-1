@@ -1,11 +1,11 @@
-'''
+"""
     -*- coding: utf-8 -*-
     Python Version: 3.6
     Course: GEOG5790M Programming-for-Spatial-Analysts-Advanced-Skills
     Author: Annabel Whipp
     File name: createdb.py
     Description: Creates an SQLite database with a single row.
-'''
+"""
 
 # install sqlite3 library
 
