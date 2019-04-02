@@ -19,4 +19,4 @@ The different practicals are:
 
 6. Cellular Automaton
 
-
+7. Multi-processing
